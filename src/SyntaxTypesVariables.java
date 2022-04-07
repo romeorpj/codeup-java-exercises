@@ -55,10 +55,10 @@ public class SyntaxTypesVariables<x> {
 
 //        String class = "a string";
 
-        String theNumberThree = "three";
-        Object o = theNumberThree;
-        int three = (int) o;
-        System.out.println(three);
+//        String theNumberThree = "three";
+//        Object o = theNumberThree;
+//        int three = (int) o;
+//        System.out.println(three);
 
 
 
@@ -66,8 +66,13 @@ public class SyntaxTypesVariables<x> {
         x += 5;
 
 
-      long longNumber =   Integer.MAX_VAL + 1;
-        System.out.println(longNumber);
+//      long longNumber =   Integer.MAX_VAL + 1;
+//        System.out.println(longNumber);
+
+
+
+        String name = "codeup";
+        System.out.printf("Hello there, %s. Nice to see you.\n", name);
     }
 
 
