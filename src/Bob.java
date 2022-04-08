@@ -22,12 +22,12 @@ public class Bob {
                 System.out.println("Whatever.");
             }
 
-            System.out.println("would you like to continue talking toBobby? y/n:");
+            System.out.println("would you like to continue talking to Bobby? y/n:");
             continueWithBobby = sc.nextLine();
             if(Objects.equals(continueWithBobby, "n")){
                 break;
             }else if(!continueWithBobby.equals("y") && !continueWithBobby.equals("n")){
-                System.out.println("You didn't follow instructions, bye!");
+                System.out.println("You didn't follow instructions, you know what, I'm leaving!!! bye...");
                 break;
             }
         } while (Objects.equals(continueWithBobby,"y"));
