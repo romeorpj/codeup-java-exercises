@@ -13,6 +13,8 @@ public class HelloWorld {
         if(Objects.equals(cityAns, "Y") && Objects.equals(transportationAns, "Y") ||
                 Objects.equals(cityAns, "y") && Objects.equals(transportationAns, "y")){
             System.out.print("Yes you can travel");
+            System.out.print("Yes you can travel");
+            System.out.print("Yes you can travel");
         }else{
             System.out.print("No you cannot travel");
         }
