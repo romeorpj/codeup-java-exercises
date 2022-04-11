@@ -13,9 +13,9 @@ public class MethodsExercises {
 //        System.out.println(modNum(10,6));
 //System.out.println(getInteger(1, 10));
 //        System.out.println(factorial(6));
-        nDiceRolls();
+//        nDiceRolls();
 
-
+//        System.out.println(factorial(4));
     }
 
 //    Question1
@@ -40,10 +40,7 @@ public class MethodsExercises {
 
     //    Question3
 
-//    static int factorial(int n)
-//    {
-//        return (n == 1 || n == 0) ? 1 : n * factorial(n - 1);
-//}
+//    static int factorial(int n) {return (n == 1 || n == 0) ? 1 : n * factorial(n - 1);}
 
 //Question4
 public static void nDiceRolls(){

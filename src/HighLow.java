@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class HighLow {
     public static void main(String[] args) {
         Random rand = new Random();
-//        In my head this says the lowest is 1 and the highest is the upperbound of 100
+//        In my head this says the lowest is 1 and the highest is the upperbound of 101 which is 100
 highLowGame((1 + rand.nextInt(101)));
     }
 
