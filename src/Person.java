@@ -1,10 +1,18 @@
 public class Person {
     public static void main(String[] args) {
 Person person1 = new Person("Richard");
-//person1.setName("Richard");
+person1.setName("Richard1111");
         person1.sayHello();
+
+
+
     }
     private String name;
+
+    public Person(String name){
+//        TODO: My constructor func
+        this.name=name;
+    }
 
     public void setName(String name){
 //TODO: change the name field to the passed value
@@ -16,7 +24,7 @@ Person person1 = new Person("Richard");
     public String getName(){
 //TODO: return the person's name
 //        returns what name has been "set" to in the setName method
-return name;
+return this.name;
     }
 
 
@@ -26,8 +34,5 @@ return name;
     }
 
 
-    Person(String name){
-//        TODO: My constructor func
-        this.name=name;
-    }
+
 }
