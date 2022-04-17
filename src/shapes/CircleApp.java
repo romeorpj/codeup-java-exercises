@@ -9,6 +9,7 @@ public class CircleApp {
             Circle circle = new Circle(userRadius);
             System.out.println(circle.getArea());
             System.out.println(circle.getCircumference());
+//            double userRadius = Input.getDouble("Now enter the width of your : ");
         } while (Input.yesNo("Would you like to make another circle?(y/n)"));
     }
 

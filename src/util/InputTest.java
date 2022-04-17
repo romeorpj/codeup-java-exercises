@@ -8,6 +8,7 @@ public class InputTest {
         System.out.println(Input.getInt(0, 50));
         System.out.println(Input.yesNo("E]Just enter y or yes "));
 
+
     }
 
 }
