@@ -1,22 +1,23 @@
 package grades;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Student {
     //    main method
-    public void main(String[] args) {
+    public static void main(String[] args) {
         Student student1 = new Student("Richard");
-        student1.addGrade(90);
         student1.addGrade(100);
+        student1.addGrade(50);
         System.out.println(student1.getGradeAverage());
-        System.out.println(student1);
+
     }
 
 
     //    Private properties
-    private final String name;
+    private  String name;
 //    private ArrayList<Integer> grades = new ArrayList<>();
-    private final ArrayList<Integer> grades;
+    private  ArrayList<Integer> grades;
 
 
     //    Student constructor
@@ -37,7 +38,7 @@ public class Student {
 
     public int getGradeAverage() {
         int gradeAdder = 0;
-        for (int i = 0; i <= grades.size(); i++) {
+        for (int i = 0; i <= grades.size() -1; i++) {
             gradeAdder += grades.get(i);
         }
         return gradeAdder / grades.size();
