@@ -1,12 +1,12 @@
 package grades;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
 
 public class GradesApplication<students> {
-    static HashMap<String, String> students = new HashMap<String, String>();
+    static HashMap<String, Student> students = new HashMap<String, Student>();
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -27,76 +27,37 @@ public class GradesApplication<students> {
         s4.addGrade(10);
         s4.addGrade(25);
 
-        students.put("kevinGittyBoi", s1.getName());
-        students.put("andreGittyBoi", s2.getName());
-        students.put("tomGittyBoi", s3.getName());
-        students.put("JohnGittyBoi", s4.getName());
+        students.put("kevinGittyBoi", s1);
+        students.put("andreGittyBoi", s2);
+        students.put("tomGittyBoi", s3);
+        students.put("JohnGittyBoi", s4);
+
+//        System.out.println(students.get("kevinGittyBoi").);
+        boolean looper = true;
+        System.out.println("Welcome!");
 
 
+        do {
+            System.out.println("Here are the GitHub usernames of our students:");
+            System.out.println(students.keySet());
+            System.out.println("What student would you like to see more information on?");
+            String userInput = sc.next();
 
-//        System.out.println(students.get("kevinGittyBoi"));
-//        System.out.println(students.get("kevinGittyBoi")+"'s" + " GPA is "+s2.getGradeAverage());
-//        System.out.println(students);
-//
-//        System.out.println("type a user name");
-//        String test = sc.nextLine();
-//        System.out.println(students.get(test));
+            if (students.containsKey(userInput)) {
+                System.out.println("Name: " + students.get(userInput).getName() + " - GitHub Username: " + userInput);
+                System.out.println("Current Average: " + students.get(userInput).getGradeAverage());
 
-    System.out.println("Welcome!");
-    System.out.println("Here are the GitHub usernames of our students:");
-    System.out.println(students.keySet());
-    System.out.println("What student would you like to see more information on?");
-    String userInput = sc.nextLine();
+            } else {
+                System.out.println("Sorry, no student found with the GitHub username of " + userInput + ".");
+                System.out.println("Would you like to see another student, y/n?");
+                String yesOrNo = sc.nextLine();
+                if (yesOrNo.equalsIgnoreCase("n")) {
+                    looper = false;
+                    System.out.println("Goodbye, and have a wonderful day!");
+                }
+            }
 
-    if(students.containsKey(userInput)){
-        System.out.println("Name: " + students.get(userInput) + " - GitHub Username: " + userInput);
-
-        switch (userInput) {
-            case "kevinGittyBoi":
-                s1.getGradeAverage();
-                break;
-            case "andreGittyBoi":
-                s2.getGradeAverage();
-                break;
-            case "tomGittyBoi":
-                s3.getGradeAverage();
-                break;
-            case "JohnGittyBoi":
-                s4.getGradeAverage();
-                break;
-        }
-
-//        for(int i = 0;i <= students.size()-1;i++){
-//            System.out.println();
-//        }
-//        System.out.println("Current Average: " + );
-    }
-
-
-
-
-
-    if (!students.containsKey(userInput)) {
-        System.out.println("Sorry, no student found with the GitHub username of " + userInput +".");
-        System.out.println("Would you like to see another student, y/n?");
-        String yesOrNo = sc.nextLine();
-if(yesOrNo.equalsIgnoreCase("y")){
-    System.out.println("Name: " + students.get("kevinGittyBoi") + " - GitHub Username: " + userInput);
-//    System.out.println("Current Average: " + );
-}
-    }else{
-        System.out.println("Goodbye");
-    }
-
-
-
+        }while (looper) ;
 
     }
-
-public void getGithubNames(){
-        for (int i = 0; i<= students.size()-1;i++){
-
-        }
-}
-
 }
