@@ -9,6 +9,8 @@ public class Student {
         Student student1 = new Student("Richard");
         student1.addGrade(100);
         student1.addGrade(50);
+        student1.addGrade(70);
+        student1.addGrade(20);
         System.out.println(student1.getGradeAverage());
 
     }
@@ -16,7 +18,6 @@ public class Student {
 
     //    Private properties
     private  String name;
-//    private ArrayList<Integer> grades = new ArrayList<>();
     private  ArrayList<Integer> grades;
 
 
